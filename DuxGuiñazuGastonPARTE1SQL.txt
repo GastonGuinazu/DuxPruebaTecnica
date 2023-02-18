@@ -1,0 +1,41 @@
+Parte 1 SQL:
+
+-- Todos los productos del rubro "librería", creados hoy.
+SELECT codigo, nombre, fecha_creacion 
+FROM producto p JOIN rubro r ON p.id_rubro = r.id_rubro
+Where r. rubro = 'librería'
+AND (DATEDIFF(day,fecha_creacion, getdate()) = 0)
+
+
+--Monto total vendido por cliente (mostrar nombre del cliente y monto).
+SELECT  c.nombre, SUM((v.cantidad*precio_unitario)) as 'total'
+FROM cliente c JOIN venta v ON c.id_cliente = v.id_cliente
+GROUP BY nombre
+
+
+--Cantidad de ventas por producto.
+SELECT p.nombre, SUM(cantidad) 'total vendido'
+FROM producto p JOIN venta v ON p.codigo=v.codigo_producto
+GROUP BY nombre
+
+--Cantidad de productos comprados por cliente en el mes actual.
+SELECT c.nombre, SUM(cantidad) 'Productos comprados'
+FROM producto p JOIN venta v ON p.codigo=v.codigo_producto
+JOIN cliente c ON v.id_cliente=c.id_cliente
+WHERE DATEDIFF(month,fecha_creacion, getdate()) = 0
+GROUP BY c.nombre
+
+
+--Ventas que tienen al menos un producto del rubro "bazar".
+SELECT id_venta 
+FROM venta v JOIN producto p ON v.codigo_producto=p.codigo
+JOIN rubro r ON p.id_rubro=r.id_rubro
+WHERE rubro = 'bazar'
+
+--Rubros que no tienen ventas en los últimos 2 meses.
+SELECT DISTINCT r.rubro
+FROM rubro r JOIN producto p ON r.id_rubro=p.id_rubro
+JOIN venta v ON p.codigo=v.codigo_producto
+WHERE r.rubro NOT IN (SELECT DISTINCT rubro FROM venta v JOIN producto p ON v.codigo_producto = p.codigo
+						JOIN rubro r ON r.id_rubro = p.id_rubro
+						WHERE DATEDIFF(month,fecha, getdate()) < 2)

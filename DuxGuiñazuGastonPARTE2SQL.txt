@@ -1,0 +1,14 @@
+CREATE DATABASE duxPruebaTecnica
+USE duxPruebaTecnica
+
+CREATE TABLE jugador (
+id_jugador int auto_increment primary key,
+nombre_jugador varchar (30),
+probabilidad double)
+
+
+CREATE TABLE partido(
+id_partido int auto_increment primary key,
+torneo varchar (30),
+sets int
+)
