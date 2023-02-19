@@ -223,9 +223,15 @@ public class Partida extends javax.swing.JFrame {
                                 .addGap(179, 179, 179)
                                 .addComponent(jLabel1))
                             .addComponent(lblTorneo, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(lblSets)
-                        .addGap(80, 80, 80))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(lblSets)
+                                .addGap(80, 80, 80))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(12, 12, 12)
+                                .addComponent(btnJugarRonda)
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(lblGanador)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -245,39 +251,33 @@ public class Partida extends javax.swing.JFrame {
                         .addGap(47, 47, 47))))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblSirveJug1, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(lblSirveJug2, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblSirveJug1, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(lblSirveJug2, javax.swing.GroupLayout.Alignment.TRAILING))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(lblPuntosJug2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(lblSetUnoJug2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(lblSetDosJug2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(lblSetTresJug2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(lblSetCuatroJug2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(lblPuntosJug1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(lblSetUnoJug1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(lblSetDosJug1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(lblSetTresJug1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(lblSetCuatroJug1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addComponent(lblPuntosJug2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lblSetUnoJug2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lblSetDosJug2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lblSetTresJug2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lblSetCuatroJug2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnJugarRonda)
-                        .addGap(124, 124, 124)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lblPuntosJug1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lblSetUnoJug1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lblSetDosJug1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lblSetTresJug1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lblSetCuatroJug1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnSalir)
                     .addComponent(lblSetCincoJug1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -291,53 +291,57 @@ public class Partida extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblTorneo)
                     .addComponent(lblSets))
-                .addGap(54, 54, 54)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(lblGanador)
-                        .addComponent(lblGanadorPunto))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addGap(3, 3, 3)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txtSetsJug1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblNombreJug1))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txtSetsJug2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblNombreJug2))))
-                .addGap(42, 42, 42)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(layout.createSequentialGroup()
+                        .addGap(54, 54, 54)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(lblPuntosJug1)
-                                .addComponent(lblSetUnoJug1)
-                                .addComponent(lblSetDosJug1)
-                                .addComponent(lblSetTresJug1)
-                                .addComponent(lblSetCuatroJug1)
-                                .addComponent(lblSetCincoJug1))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(lblGanador)
+                                .addComponent(lblGanadorPunto))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel2)
+                                .addGap(3, 3, 3)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(lblPuntosJug2)
-                                    .addComponent(lblSetUnoJug2))
-                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(lblSetDosJug2)
-                                    .addComponent(lblSetTresJug2)
-                                    .addComponent(lblSetCuatroJug2)
-                                    .addComponent(lblSetCincoJug2)))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(19, 19, 19)
-                        .addComponent(lblSirveJug1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(lblSirveJug2)))
-                .addGap(25, 25, 25)
-                .addComponent(btnJugarRonda)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(txtSetsJug1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lblNombreJug1))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(txtSetsJug2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lblNombreJug2))))
+                        .addGap(42, 42, 42)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(lblPuntosJug1)
+                                        .addComponent(lblSetUnoJug1)
+                                        .addComponent(lblSetDosJug1)
+                                        .addComponent(lblSetTresJug1)
+                                        .addComponent(lblSetCuatroJug1)
+                                        .addComponent(lblSetCincoJug1))
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                            .addComponent(lblPuntosJug2)
+                                            .addComponent(lblSetUnoJug2))
+                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                            .addComponent(lblSetDosJug2)
+                                            .addComponent(lblSetTresJug2)
+                                            .addComponent(lblSetCuatroJug2)
+                                            .addComponent(lblSetCincoJug2)))))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(19, 19, 19)
+                                .addComponent(lblSirveJug1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(lblSirveJug2)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 53, Short.MAX_VALUE)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnJugarRonda)
+                        .addGap(25, 25, 25)))
                 .addComponent(btnSalir)
                 .addGap(28, 28, 28))
         );
@@ -370,9 +374,6 @@ public class Partida extends javax.swing.JFrame {
                     break;
             }
         }
-//        else {
-//            JOptionPane.showMessageDialog(this, "El partido ha finalizado");
-//        }
         ganador();
 
     }//GEN-LAST:event_btnJugarRondaActionPerformed
@@ -393,8 +394,8 @@ public class Partida extends javax.swing.JFrame {
                 return;
             } else if (puntajeJug2 == 40 && puntajeJug1 == 40) {
                 puntajeJug2 = 45;
-                lblPuntosJug2.setText(String.valueOf(puntajeJug2));
-                //lblPuntosJug2.setText(String.valueOf("AD"));
+                //lblPuntosJug2.setText(String.valueOf(puntajeJug2));
+                lblPuntosJug2.setText(String.valueOf("AD"));
                 return;
             } else if (puntajeJug2 == 40 && puntajeJug1 != 40) {
                 resetearPuntajes();
@@ -428,7 +429,7 @@ public class Partida extends javax.swing.JFrame {
                 cambiarBanderaSaque();
             } else if (puntajeJug1 == 40 && puntajeJug2 == 40) {
                 puntajeJug1 = 45;
-                lblPuntosJug1.setText(String.valueOf(puntajeJug1));
+                lblPuntosJug1.setText(String.valueOf("AD"));
                 //lblPuntosJug1.setText(String.valueOf("AD"));
             } else if (puntajeJug1 == 40 && puntajeJug2 != 40) {
                 resetearPuntajes();
@@ -462,8 +463,8 @@ public class Partida extends javax.swing.JFrame {
                 return;
             } else if (puntajeJug2 == 40 && puntajeJug1 == 40) {
                 puntajeJug2 = 45;
-                lblPuntosJug2.setText(String.valueOf(puntajeJug2));
-                //lblPuntosJug2.setText(String.valueOf("AD"));
+                //lblPuntosJug2.setText(String.valueOf(puntajeJug2));
+                lblPuntosJug2.setText(String.valueOf("AD"));
                 return;
             } else if (puntajeJug2 == 40 && puntajeJug1 != 40) {
                 resetearPuntajes();
@@ -497,8 +498,8 @@ public class Partida extends javax.swing.JFrame {
                 cambiarBanderaSaque();
             } else if (puntajeJug1 == 40 && puntajeJug2 == 40) {
                 puntajeJug1 = 45;
-                lblPuntosJug1.setText(String.valueOf(puntajeJug1));
-                //lblPuntosJug1.setText(String.valueOf("AD"));
+                //lblPuntosJug1.setText(String.valueOf(puntajeJug1));
+                lblPuntosJug1.setText(String.valueOf("AD"));
             } else if (puntajeJug1 == 40 && puntajeJug2 != 40) {
                 resetearPuntajes();
                 juegosSet2Jug1 += 1;
@@ -531,8 +532,8 @@ public class Partida extends javax.swing.JFrame {
                 return;
             } else if (puntajeJug2 == 40 && puntajeJug1 == 40) {
                 puntajeJug2 = 45;
-                lblPuntosJug2.setText(String.valueOf(puntajeJug2));
-                //lblPuntosJug2.setText(String.valueOf("AD"));
+                //lblPuntosJug2.setText(String.valueOf(puntajeJug2));
+                lblPuntosJug2.setText(String.valueOf("AD"));
                 return;
             } else if (puntajeJug2 == 40 && puntajeJug1 != 40) {
                 resetearPuntajes();
@@ -566,8 +567,8 @@ public class Partida extends javax.swing.JFrame {
                 cambiarBanderaSaque();
             } else if (puntajeJug1 == 40 && puntajeJug2 == 40) {
                 puntajeJug1 = 45;
-                lblPuntosJug1.setText(String.valueOf(puntajeJug1));
-                //lblPuntosJug1.setText(String.valueOf("AD"));
+                //lblPuntosJug1.setText(String.valueOf(puntajeJug1));
+                lblPuntosJug1.setText(String.valueOf("AD"));
             } else if (puntajeJug1 == 40 && puntajeJug2 != 40) {
                 resetearPuntajes();
                 juegosSet3Jug1 += 1;
@@ -600,8 +601,8 @@ public class Partida extends javax.swing.JFrame {
                 return;
             } else if (puntajeJug2 == 40 && puntajeJug1 == 40) {
                 puntajeJug2 = 45;
-                lblPuntosJug2.setText(String.valueOf(puntajeJug2));
-                //lblPuntosJug2.setText(String.valueOf("AD"));
+                //lblPuntosJug2.setText(String.valueOf(puntajeJug2));
+                lblPuntosJug2.setText(String.valueOf("AD"));
                 return;
             } else if (puntajeJug2 == 40 && puntajeJug1 != 40) {
                 resetearPuntajes();
@@ -635,8 +636,8 @@ public class Partida extends javax.swing.JFrame {
                 cambiarBanderaSaque();
             } else if (puntajeJug1 == 40 && puntajeJug2 == 40) {
                 puntajeJug1 = 45;
-                lblPuntosJug1.setText(String.valueOf(puntajeJug1));
-                //lblPuntosJug1.setText(String.valueOf("AD"));
+                //lblPuntosJug1.setText(String.valueOf(puntajeJug1));
+                lblPuntosJug1.setText(String.valueOf("AD"));
             } else if (puntajeJug1 == 40 && puntajeJug2 != 40) {
                 resetearPuntajes();
                 juegosSet4Jug1 += 1;
@@ -669,8 +670,8 @@ public class Partida extends javax.swing.JFrame {
                 return;
             } else if (puntajeJug2 == 40 && puntajeJug1 == 40) {
                 puntajeJug2 = 45;
-                lblPuntosJug2.setText(String.valueOf(puntajeJug2));
-                //lblPuntosJug2.setText(String.valueOf("AD"));
+                //lblPuntosJug2.setText(String.valueOf(puntajeJug2));
+                lblPuntosJug2.setText(String.valueOf("AD"));
                 return;
             } else if (puntajeJug2 == 40 && puntajeJug1 != 40) {
                 resetearPuntajes();
@@ -704,8 +705,8 @@ public class Partida extends javax.swing.JFrame {
                 cambiarBanderaSaque();
             } else if (puntajeJug1 == 40 && puntajeJug2 == 40) {
                 puntajeJug1 = 45;
-                lblPuntosJug1.setText(String.valueOf(puntajeJug1));
-                //lblPuntosJug1.setText(String.valueOf("AD"));
+                //lblPuntosJug1.setText(String.valueOf(puntajeJug1));
+                lblPuntosJug1.setText(String.valueOf("AD"));
             } else if (puntajeJug1 == 40 && puntajeJug2 != 40) {
                 resetearPuntajes();
                 juegosSet5Jug1 += 1;
@@ -827,6 +828,7 @@ public class Partida extends javax.swing.JFrame {
         this.dispose();
         new Partida(controlador).setVisible(true);        
     }
+ 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnJugarRonda;
